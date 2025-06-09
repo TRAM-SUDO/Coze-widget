@@ -1,22 +1,31 @@
 
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Coze AI</title>
-    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
-  </head>
-  <body>
-    <h1>👋 Chào mừng bạn đến với Coze AI</h1>
-    <script>
-      new CozeWebSDK.WebChatClient({
-        config: {
-          bot_id: '7511379353201295368',
-        },
-        componentProps: {
-          title: 'Coze',
-        }
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coze Chatbot</title>
+  <script>
+    window.cozeChatConfig = {
+      bot_id: "7511379353201295368",  // 🔁 Thay bằng bot_id thật của bạn nếu cần
+      mode: "float", // 👈 Quan trọng: Chỉ hiện bong bóng chat
+      entrance: "bubble", // 👈 Hiện dạng nút bong bóng
+      bubble_icon: "", // Bạn có thể thay bằng link icon tuỳ chỉnh nếu muốn
+      bubble_background: "#3b81f6", // Màu nền của bong bóng
+      auto_show: false, // Không tự mở cửa sổ chat khi tải trang
+      auto_hide: false
+    };
+  </script>
+  <script src="https://cdn.coze.com/scripts/sdk/chat.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body></body>
 </html>
