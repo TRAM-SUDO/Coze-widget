@@ -3,27 +3,39 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coze Chatbot</title>
+  <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
   <script>
-    window.cozeChatConfig = {
-      bot_id: "7511379353201295368",  // 🔁 Thay bằng bot_id thật của bạn nếu cần
-      mode: "float", // 👈 Quan trọng: Chỉ hiện bong bóng chat
-      entrance: "bubble", // 👈 Hiện dạng nút bong bóng
-      bubble_icon: "", // Bạn có thể thay bằng link icon tuỳ chỉnh nếu muốn
-      bubble_background: "#3b81f6", // Màu nền của bong bóng
-      auto_show: false, // Không tự mở cửa sổ chat khi tải trang
-      auto_hide: false
-    };
+    new CozeWebSDK.WebChatClient({
+      config: {
+        bot_id: '7511379353201295368', // 🔁 Thay bằng bot_id thật
+        mode: 'float',                 // 👈 Hiển thị dạng nổi
+        entrance: 'bubble',           // 👈 Bong bóng chat
+        auto_show: false,
+        auto_hide: false,
+        bubble_icon: '',              // (Tùy chọn) icon cho bong bóng
+        bubble_background: '#3b81f6'  // (Tùy chọn) màu bong bóng
+      },
+      componentProps: {
+        title: 'Coze',
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_aMi0wkqZMgjlidS16VvA15JqWreC4NauZhSaD34n7DVzir9lXoVnuSRJFKYCD4A2',
+        onRefreshToken: function () {
+          // Trong trường hợp token hết hạn, có thể trả về token mới
+          return 'pat_aMi0wkqZMgjlidS16VvA15JqWreC4NauZhSaD34n7DVzir9lXoVnuSRJFKYCD4A2';
+        }
+      }
+    });
   </script>
-  <script src="https://cdn.coze.com/scripts/sdk/chat.js"></script>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: transparent;
       height: 100%;
       overflow: hidden;
+      background: transparent;
     }
   </style>
 </head>
