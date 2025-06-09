@@ -1,18 +1,23 @@
-<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
-<script>
-  new CozeWebSDK.WebChatClient({
-    config: {
-      bot_id: '7511379353201295368',
-    },
-    componentProps: {
-      title: 'Coze',
-    },
-    auth: {
-      type: 'token',
-      token: 'pat_aMi0wkqZMgjlidS16VvA15JqWreC4NauZhSaD34n7DVzir9lXoVnuSRJFKYCD4A2',
-      onRefreshToken: function () {
-        return 'pat_aMi0wkqZMgjlidS16VvA15JqWreC4NauZhSaD34n7DVzir9lXoVnuSRJFKYCD4A2'
-      }
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Coze Chat Widget</title>
+  <script>
+    window.cozeChatConfig = {
+      bot_id: "7511379353201295368"  // 👈 Thay bằng bot ID thật của bạn
+    };
+  </script>
+  <script src="https://cdn.coze.com/scripts/sdk/chat.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      height: 100%;
+      overflow: hidden;
     }
-  });
-</script>
+  </style>
+</head>
+<body></body>
+</html>
