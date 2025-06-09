@@ -3,27 +3,23 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Coze Chatbot</title>
+  <title>Coze Chatbot - Full Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
   <script>
     new CozeWebSDK.WebChatClient({
       config: {
         bot_id: '7511379353201295368', // 🔁 Thay bằng bot_id thật
-        mode: 'float',                 // 👈 Hiển thị dạng nổi
-        entrance: 'bubble',           // 👈 Bong bóng chat
-        auto_show: false,
-        auto_hide: false,
-        bubble_icon: '',              // (Tùy chọn) icon cho bong bóng
-        bubble_background: '#3b81f6'  // (Tùy chọn) màu bong bóng
+        mode: 'fullpage',              // 👉 Hiển thị toàn trang
+        auto_show: true
       },
       componentProps: {
-        title: 'Coze',
+        title: 'Coze'
       },
       auth: {
         type: 'token',
         token: 'pat_aMi0wkqZMgjlidS16VvA15JqWreC4NauZhSaD34n7DVzir9lXoVnuSRJFKYCD4A2',
         onRefreshToken: function () {
-          // Trong trường hợp token hết hạn, có thể trả về token mới
           return 'pat_aMi0wkqZMgjlidS16VvA15JqWreC4NauZhSaD34n7DVzir9lXoVnuSRJFKYCD4A2';
         }
       }
@@ -34,8 +30,8 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
-      background: transparent;
+      width: 100%;
+      background: #fff;
     }
   </style>
 </head>
